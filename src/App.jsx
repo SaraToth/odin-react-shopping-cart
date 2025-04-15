@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <h1>hello</h1>
+    <Navbar cartNumber={0}/>
   )
 }
 
