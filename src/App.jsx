@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar cartNumber={0}/>
-      <Outlet />
+      <main><Outlet /></main>
       <Footer />
     </>
   )
