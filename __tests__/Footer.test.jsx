@@ -6,7 +6,6 @@ import Footer from "../src/components/Footer";
 describe("Footer", () => {
     it("Renders Footer content", () => {
         render(<Footer />, { wrapper: BrowserRouter});
-        
         expect(screen.getByText(/all rights reserved/i)).toBeInTheDocument();
     })
 })
