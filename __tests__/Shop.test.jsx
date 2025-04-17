@@ -1,11 +1,64 @@
-import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { describe, it, expect, vi, afterEach } from "vitest";
+import { render, screen, cleanup} from "@testing-library/react";
+import { MemoryRouter, Routes, Route, Outlet } from "react-router-dom";
 import Shop from "../src/pages/Shop";
 
+const OutletContextProvider = () => {
+    const cartNumber = 2;
+    const setCartNumber = vi.fn();
+    return <Outlet context={{ cartNumber, setCartNumber }} />;
+};
+
+afterEach(() => {
+    cleanup(); // reset DOM
+    vi.restoreAllMocks(); // reset mocks
+    }
+);
+
 describe("Shop page", () => {
-    it("Renders the shop page content", () => {
-        render(<Shop />, {wrapper: BrowserRouter});
-        expect(screen.getByRole('heading', { name: /shop page/i})).toBeInTheDocument();
+    it("Renders the shop page content", async () => {
+        render(
+            <MemoryRouter initialEntries={["/shop"]}>
+            <Routes>
+              <Route path="/" element={<OutletContextProvider />}>
+                <Route path="shop" element={<Shop />} />
+              </Route>
+            </Routes>
+          </MemoryRouter>
+        )
+        const heading = await screen.getByRole('heading', { name: /shop/i});
+        expect(heading).toBeInTheDocument();
     })
-})
+
+    it("Fetches from the API", async () => {
+            globalThis.fetch = vi.fn(() => (
+                Promise.resolve({
+                    json: () => 
+                        Promise.resolve([
+                        {
+                            id: 1,
+                            title: "Test product",
+                            price: 19.99,
+                            image: "https://google.com",
+                            description: "test description",
+                        },
+                    ]),
+                })
+        ));
+
+        render(
+            <MemoryRouter initialEntries={["/shop"]}>
+            <Routes>
+              <Route path="/" element={<OutletContextProvider />}>
+                <Route path="shop" element={<Shop />} />
+              </Route>
+            </Routes>
+          </MemoryRouter>
+        )
+
+        const productTitle = await screen.findByText(/test product/i);
+        expect(productTitle).toBeInTheDocument();
+
+        })
+        
+    })
