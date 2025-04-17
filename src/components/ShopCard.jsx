@@ -9,12 +9,14 @@ const ShopCard = ({shopItem, cartNumber, setCartNumber}) => {
 
     return (
         <div className={styles.card}>
-            <span className={styles.span}><img className={styles.img} src={shopItem.imageURL}/></span>
-            <div className={styles.cardText}>
-                <p>{shopItem.title}</p>
-                <p className={styles.price}>${shopItem.price}</p>
+            <div className={styles.cardContent}>
+                <span className={styles.span}><img className={styles.img} src={shopItem.imageURL}/></span>
+                <div className={styles.cardText}>
+                    <p>{shopItem.title}</p>
+                    <p className={styles.price}>${shopItem.price}</p>
+                </div>
             </div>
-            <button onClick={handleClick}>Add to Cart</button>
+            <button className={styles.button} onClick={handleClick}>Add to Cart</button>
         </div>
     )
 }
