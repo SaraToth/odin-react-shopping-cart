@@ -1,4 +1,9 @@
 .nav {
+    box-sizing: border-box;
+    position: fixed;
+    min-width: 100%;
+    background-color: white;
+    top: 0;
     display: flex;
     font-size: 20px;
     padding: 25px 50px 10px;
@@ -24,15 +29,17 @@
 .cart {
     max-width: 25px;
     height: auto;
+    padding-right: 15px;
 }
 
 .badge {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 12px;
+    right: 50px;
     padding: 5px 9px;
     border-radius: 50%;
-    background: #ffe5e5;
+    background: #e9a1b9;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
 }

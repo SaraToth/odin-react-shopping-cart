@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import cart from "../assets/shopping-cart.png";
 
-const Navbar = ({cartNumber = 2}) => {
+const Navbar = ({cartNumber}) => {
 
     return (
         <nav className={styles.nav}>
