@@ -6,6 +6,7 @@ import { useOutletContext } from "react-router-dom";
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
     const {cartNumber, setCartNumber} = useOutletContext();
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchShopData () {
@@ -29,7 +30,9 @@ const Shop = () => {
             setShopData(filteredData);
         }
 
-        fetchShopData();
+        fetchShopData().catch((error) => {
+            setError(error);
+        });
     }, []);
 
 
@@ -37,6 +40,7 @@ const Shop = () => {
         <section className={styles.section}>
             <span className={styles.span}><h1>SHOP</h1></span>
             <div className={styles.shopGrid}>
+                {error && <p>A network error occured</p>}
                 {shopData &&  shopData.map((shopItem) => {
                    return ( <ShopCard cartNumber={cartNumber} setCartNumber={setCartNumber} shopItem={shopItem} key={shopItem.id} />)
                 })}
