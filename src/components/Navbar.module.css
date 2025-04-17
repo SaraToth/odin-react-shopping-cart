@@ -1,11 +1,11 @@
-nav {
+.nav {
     display: flex;
     font-size: 20px;
     padding: 10px 50px;
     border-bottom: 1px solid gray;
 }
 
-ul {
+.ul {
     flex: 1;
     display: flex;
     list-style-type: none;

@@ -2,11 +2,11 @@
     border: 1px solid black;
 }
 
-img {
+.img {
     max-width: 100px;
 }
 
-span {
+.span {
     display: flex;
     justify-content: center;
     align-items: center;
