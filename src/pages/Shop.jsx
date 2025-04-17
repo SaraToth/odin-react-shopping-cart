@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import ShopCard from "../components/ShopCard";
+import styles from "./Shop.module.css";
 
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
@@ -21,7 +23,7 @@ const Shop = () => {
 
                 filteredData.push(item);
             })
-            
+
             setShopData(filteredData);
         }
 
@@ -30,7 +32,15 @@ const Shop = () => {
 
 
     return (
-        <h1>This is the Shop page.</h1>
+        <div>
+            <h1>This is the Shop page.</h1>
+            <div className={styles.shopGrid}>
+                {shopData &&  shopData.map((shopItem) => {
+                   return ( <ShopCard shopItem={shopItem} key={shopItem.id} />)
+                })}
+            </div>
+        </div>
+
     )
 };
 
