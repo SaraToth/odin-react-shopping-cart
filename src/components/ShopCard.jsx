@@ -9,6 +9,7 @@ const ShopCard = ({shopItem}) => {
                 <p>{shopItem.title}</p>
                 <p className={styles.price}>${shopItem.price}</p>
             </div>
+            <button>Add to Cart</button>
         </div>
     )
 }
