@@ -1,8 +1,7 @@
 .nav {
     display: flex;
     font-size: 20px;
-    padding: 10px 50px;
-    border-bottom: 1px solid gray;
+    padding: 25px 50px 10px;
 }
 
 .ul {
