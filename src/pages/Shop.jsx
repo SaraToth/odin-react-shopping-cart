@@ -6,30 +6,28 @@ const Shop = () => {
     useEffect(() => {
         async function fetchShopData () {
             const response = await fetch('https://fakestoreapi.com/products/');
-            const shopData = await response.json();
+            const rawShopData = await response.json();
             
             const filteredData = [];
 
-            shopData.map((item) => {
-                const filteredItem = createDataObject(item);
-                filteredData.push(filteredItem);
-            })
+            rawShopData.map((rawData) => {
+                const item = {
+                    imageURL: rawData.image,
+                    price: rawData.price,
+                    title: rawData.title,
+                    id: rawData.id,
+                    description: rawData.description,
+                };
 
+                filteredData.push(item);
+            })
+            
             setShopData(filteredData);
         }
 
         fetchShopData();
     }, []);
 
-    const createDataObject = (item) => {
-        return {
-            imageURL: item.image,
-            price: item.price,
-            title: item.title,
-            id: item.id,
-            description: item.description,
-        }
-    }
 
     return (
         <h1>This is the Shop page.</h1>
