@@ -1,0 +1,21 @@
+.card {
+    border: 1px solid black;
+}
+
+img {
+    max-width: 100px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardText {
+    font-weight: bold;
+}
+
+.price {
+    color: darkorchid;
+}
