@@ -13,8 +13,8 @@
 
 .shopGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
     padding: 75px 50px 125px;
     flex: 1;
 }

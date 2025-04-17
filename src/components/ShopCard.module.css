@@ -15,6 +15,9 @@
 .img {
     max-width: 100px;
     max-height: 200px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
 }
 
 .span {
@@ -23,15 +26,18 @@
     align-items: center;
     padding-top: 20px;
     flex: 1;
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
 }
 
 .cardText {
     font-weight: bold;
-    padding: 0 25px;
+    padding: 20px 40px;
 }
 
 .price {
-    padding: 12px 0;
+    padding: 12px 0 30px;
     font-size: 30px;
 }
 
@@ -42,7 +48,7 @@
     font-weight: bold;
     border: 1px outset #e9a1b9;
     border-radius: 2px;
-    padding: 12px;
+    padding: 18px;
     width: 100%;
 }
 
