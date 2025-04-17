@@ -39,6 +39,7 @@ const Shop = () => {
     return (
         <section className={styles.section}>
             <span className={styles.span}><h1>SHOP</h1></span>
+
             <div className={styles.shopGrid}>
                 {error && <p>A network error occured</p>}
                 {shopData &&  shopData.map((shopItem) => {
