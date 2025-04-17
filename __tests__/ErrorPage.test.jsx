@@ -13,5 +13,3 @@ describe('ErrorPage', () => {
         expect(screen.getByText(/network issue/i)).toBeInTheDocument();
     })
 })
-
-// expect(screen.getByRole('link', {name: /home/i})).toBeInTheDocument();
