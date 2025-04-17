@@ -1,10 +1,39 @@
 nav {
-    background-color: lightcyan;
+    background-color: orange;
+    padding: 10px 0;
     display: flex;
+    font-size: 20px;
 }
 
 ul {
     flex: 1;
     display: flex;
     list-style-type: none;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.cart {
+    max-width: 25px;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 5px 9px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 12px;
 }
