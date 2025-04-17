@@ -1,0 +1,10 @@
+nav {
+    background-color: lightcyan;
+    display: flex;
+}
+
+ul {
+    flex: 1;
+    display: flex;
+    list-style-type: none;
+}
