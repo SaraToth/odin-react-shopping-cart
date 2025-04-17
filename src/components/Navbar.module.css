@@ -1,8 +1,8 @@
 nav {
-    background-color: orange;
-    padding: 10px 0;
     display: flex;
     font-size: 20px;
+    padding: 10px 50px;
+    border-bottom: 1px solid gray;
 }
 
 ul {
@@ -19,7 +19,7 @@ ul {
 
 .link:hover {
     cursor: pointer;
-    color: white;
+    color: #e9a1b9;
 }
 
 .cart {
@@ -33,7 +33,7 @@ ul {
     right: 10px;
     padding: 5px 9px;
     border-radius: 50%;
-    background: #333;
+    background: #ffe5e5;
     color: white;
     font-size: 12px;
 }
