@@ -11,5 +11,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../assets/notebooks-bgd.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     /* needs background image */
 }
