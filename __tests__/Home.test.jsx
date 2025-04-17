@@ -6,6 +6,6 @@ import Home from "../src/pages/Home";
 describe("Home Page", () => {
     it("Renders Home page content 'Home page content", () => {
         render(<Home />, { wrapper: BrowserRouter });
-        expect(screen.getByRole('heading', { name: /home page content/i})).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /daywish/i})).toBeInTheDocument();
     })
 })
