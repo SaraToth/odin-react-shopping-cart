@@ -32,14 +32,14 @@ const Shop = () => {
 
 
     return (
-        <div>
-            <h1>This is the Shop page.</h1>
+        <section className={styles.section}>
+            <span className={styles.span}><h1>SHOP</h1></span>
             <div className={styles.shopGrid}>
                 {shopData &&  shopData.map((shopItem) => {
                    return ( <ShopCard shopItem={shopItem} key={shopItem.id} />)
                 })}
             </div>
-        </div>
+        </section>
 
     )
 };
