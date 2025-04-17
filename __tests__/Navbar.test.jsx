@@ -12,23 +12,22 @@ describe('Navbar', () => {
         expect(screen.getByRole('link', { name: /shop/i})).toBeInTheDocument();
     })
 
-    it("Cart display reflects items in the cart", () => {
+    it("Displays cart image", () => {
+        render(<Navbar />, { wrapper: BrowserRouter});
+    })
+
+    it("Cart badge reflects items in the cart", () => {
         render(<Navbar cartNumber={2} />, {wrapper: BrowserRouter});
-        expect(screen.getByText(/2 items in cart/i)).toBeInTheDocument();
+        expect(screen.getByText(/2/i)).toBeInTheDocument();
 
         render(<Navbar cartNumber={5} />, {wrapper: BrowserRouter});
-        expect(screen.getByText(/5 items in cart/i)).toBeInTheDocument();
+        expect(screen.getByText(/5/i)).toBeInTheDocument();
     })
 
-    it("Cart is empty when cartNumber is 0", () => {
+    it("Empty cart does not display a 0 number", () => {
         render(<Navbar cartNumber={0} />, {wrapper: BrowserRouter});
-        expect(screen.getByText(/cart is empty/i)).toBeInTheDocument();
-    })
-
-    it("Does not render cart info when no prop is passed", () => {
-        render(<Navbar />, {wrapper: BrowserRouter});
-        expect(screen.queryByText(/items in cart/i)).not.toBeInTheDocument();
-        expect(screen.queryByText(/cart is empty/i)).not.toBeInTheDocument();
+        expect(screen.getByAltText(/cart/i)).toBeInTheDocument();
+        expect(screen.queryByText(/0/i)).not.toBeInTheDocument();
     })
 
 })
