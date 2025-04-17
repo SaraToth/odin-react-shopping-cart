@@ -11,8 +11,9 @@ const routes = [
             { index: true, element: <Home /> },
             { path: "/shop", element: <Shop /> },
             { path: "*", element: <ErrorPage /> }, // All uknown paths will display nested error page
-        ],
+        ]
     },
 ];
+
 
 export default routes;
