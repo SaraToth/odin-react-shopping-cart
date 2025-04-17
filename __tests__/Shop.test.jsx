@@ -57,7 +57,9 @@ describe("Shop page", () => {
         )
 
         const productTitle = await screen.findByText(/test product/i);
+        const price = await screen.findByText(/19.99/i);
         expect(productTitle).toBeInTheDocument();
+        expect(price).toBeInTheDocument();
 
         })
         
