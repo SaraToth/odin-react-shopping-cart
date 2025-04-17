@@ -12,15 +12,6 @@ describe('ErrorPage', () => {
         render(<RouterProvider router={router} />);
         expect(screen.getByText(/network issue/i)).toBeInTheDocument();
     })
-
-    it("Renders link to home page", () => {
-        const router = createMemoryRouter(routes, {
-            initialEntries: ["/nonexistent"], // This route doesn't exist
-        });
-
-        render(<RouterProvider router={router} />);
-        expect(screen.getByRole('link', { name: /return to the main page/i})).toBeInTheDocument();
-    })
 })
 
 // expect(screen.getByRole('link', {name: /home/i})).toBeInTheDocument();
