@@ -7,6 +7,7 @@ const Navbar = ({cartNumber = 2}) => {
     return (
         <nav className={styles.nav}>
             <ul className={styles.ul}>
+                <li><Link className={styles.link} to={"/"} ><p><b><i>Shop Name</i></b></p></Link></li>
                 <li><Link className={styles.link} to ="/">Home</Link></li>
                 <li><Link className={styles.link} to="/Shop">Shop</Link></li>
             </ul>
