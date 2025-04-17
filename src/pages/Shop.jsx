@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import ShopCard from "../components/ShopCard";
 import styles from "./Shop.module.css";
+import { useOutletContext } from "react-router-dom";
 
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
+    const {cartNumber, setCartNumber} = useOutletContext();
 
     useEffect(() => {
         async function fetchShopData () {
@@ -36,7 +38,7 @@ const Shop = () => {
             <span className={styles.span}><h1>SHOP</h1></span>
             <div className={styles.shopGrid}>
                 {shopData &&  shopData.map((shopItem) => {
-                   return ( <ShopCard shopItem={shopItem} key={shopItem.id} />)
+                   return ( <ShopCard cartNumber={cartNumber} setCartNumber={setCartNumber} shopItem={shopItem} key={shopItem.id} />)
                 })}
             </div>
         </section>

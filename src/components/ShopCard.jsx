@@ -1,6 +1,11 @@
 import styles from "./ShopCard.module.css";
 
-const ShopCard = ({shopItem}) => {
+const ShopCard = ({shopItem, cartNumber, setCartNumber}) => {
+
+    const handleClick = () => {
+        const currentNumber = cartNumber + 1;
+        setCartNumber(currentNumber);
+    }
 
     return (
         <div className={styles.card}>
@@ -9,7 +14,7 @@ const ShopCard = ({shopItem}) => {
                 <p>{shopItem.title}</p>
                 <p className={styles.price}>${shopItem.price}</p>
             </div>
-            <button>Add to Cart</button>
+            <button onClick={handleClick}>Add to Cart</button>
         </div>
     )
 }
