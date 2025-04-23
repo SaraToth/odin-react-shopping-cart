@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
 /**
- * Home Page Component
+ * Renders Home page text and shop now button
  * 
- * @returns {JSX.Element} Renders Home page content
+ * @returns {JSX.Element}
  */
 const Home = () => {
     return (
