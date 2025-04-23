@@ -1,10 +1,11 @@
-
+import styles from "./ErrorPage.module.css";
 
 const ErrorPage = () => {
+    
     return (
-        <div>
-        <p>There was a network issue:</p>
-        </div>
+        <section className={styles.section}>
+            <h1 className={styles.header}>Something went wrong</h1>
+        </section>
     )
 };
 
