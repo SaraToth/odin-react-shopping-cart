@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import ShopCard from "../components/ShopCard";
 import styles from "./Shop.module.css";
-import { useOutletContext } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
-    const {cartNumber, setCartNumber} = useOutletContext();
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -55,7 +53,7 @@ const Shop = () => {
                 {loading && <p>Loading...</p>}
                 {error && <ErrorPage />}
                 {shopData &&  shopData.map((shopItem) => {
-                   return ( <ShopCard cartNumber={cartNumber} setCartNumber={setCartNumber} shopItem={shopItem} key={shopItem.id} />)
+                   return ( <ShopCard shopItem={shopItem} key={shopItem.id} />)
                 })}
             </div>
         </section>

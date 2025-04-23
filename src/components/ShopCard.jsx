@@ -1,6 +1,8 @@
+import { useOutletContext } from "react-router-dom";
 import styles from "./ShopCard.module.css";
 
-const ShopCard = ({shopItem, cartNumber, setCartNumber}) => {
+const ShopCard = ({shopItem}) => {
+    const {cartNumber, setCartNumber} = useOutletContext();
 
     const handleClick = () => {
         const currentNumber = cartNumber + 1;
