@@ -8,11 +8,12 @@ const Shop = () => {
     const [shopData, setShopData] = useState([]);
     const {cartNumber, setCartNumber} = useOutletContext();
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function fetchShopData () {
             try {
-                const response = await fetch('https://fakestoreapi.com/roducts/', { mode: "cors"});
+                const response = await fetch('https://fakestoreapi.com/products/', { mode: "cors"});
 
                 if(response.status >= 400) {
                     throw new Error("server error");
@@ -37,6 +38,8 @@ const Shop = () => {
 
             } catch (error) {
                 setError(error);
+            } finally {
+                setLoading(false);
             }
         }
 
@@ -49,6 +52,7 @@ const Shop = () => {
             <span className={styles.span}><h1>SHOP</h1></span>
 
             <div className={styles.shopGrid}>
+                {loading && <p>Loading...</p>}
                 {error && <ErrorPage />}
                 {shopData &&  shopData.map((shopItem) => {
                    return ( <ShopCard cartNumber={cartNumber} setCartNumber={setCartNumber} shopItem={shopItem} key={shopItem.id} />)
