@@ -3,6 +3,12 @@ import ShopCard from "../components/ShopCard";
 import styles from "./Shop.module.css";
 import ErrorPage from "./ErrorPage";
 
+
+/**
+ * Shop Page Component
+ * 
+ * @returns {JSX.Element} Rendeers shop Page content
+ */
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
     const [error, setError] = useState(null);
