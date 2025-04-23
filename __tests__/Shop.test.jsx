@@ -66,7 +66,7 @@ describe("Shop page", () => {
 
   it("Catches an API fetch error correctly", async () => {
     globalThis.fetch = vi.fn(() =>
-      Promise.reject(new Error("Network Error"))
+      Promise.reject(new Error())
     );
 
     render(
@@ -79,7 +79,7 @@ describe("Shop page", () => {
     </MemoryRouter>
     )
     
-    const errorText = await screen.findByText(/network issue/i);
+    const errorText = await screen.findByText(/something went wrong/i);
     expect(errorText).toBeInTheDocument();
 })
         

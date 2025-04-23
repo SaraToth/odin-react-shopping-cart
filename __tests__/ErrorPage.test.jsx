@@ -10,6 +10,6 @@ describe('ErrorPage', () => {
         });
 
         render(<RouterProvider router={router} />);
-        expect(screen.getByText(/network issue/i)).toBeInTheDocument();
+        expect(screen.getByText(/something went wrong/i)).toBeInTheDocument();
     })
 })
