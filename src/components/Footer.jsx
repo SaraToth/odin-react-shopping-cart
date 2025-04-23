@@ -1,9 +1,9 @@
 import styles from "./Footer.module.css";
 
 /**
- * Footer Component
+ * Renders the Footer content
  * 
- * @returns {JSX.ELement} Renders Footer content
+ * @returns {JSX.ELement}
  */
 const Footer = () => {
     return  (
