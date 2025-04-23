@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import cart from "../assets/shopping-cart.png";
 
+/**
+ * @typedef {Object} NavbarProps
+ * @property {cartNumber} cartNumber React state from App.jsx - Number of items currently in cart
+ * 
+ * @param {NavbarProps} props
+ * @returns {JSX.Element} Renders the Navbar
+ */
 const Navbar = ({cartNumber}) => {
 
     return (
