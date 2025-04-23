@@ -3,11 +3,13 @@ import styles from "./Navbar.module.css";
 import cart from "../assets/shopping-cart.png";
 
 /**
+ * Renders the main navbar with Home and Shop links, and cart indicator
+ * 
  * @typedef {Object} NavbarProps
- * @property {cartNumber} cartNumber React state from App.jsx - Number of items currently in cart
+ * @property {number} cartNumber - Number of items in the cart
  * 
  * @param {NavbarProps} props
- * @returns {JSX.Element} Renders the Navbar
+ * @returns {JSX.Element}
  */
 const Navbar = ({cartNumber}) => {
 
