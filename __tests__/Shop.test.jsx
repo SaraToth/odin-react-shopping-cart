@@ -79,7 +79,7 @@ describe("Shop page", () => {
       </MemoryRouter>
       )
       
-      const errorText = await screen.findByText(/network error occured/i);
+      const errorText = await screen.findByText(/network issue/i);
       expect(errorText).toBeInTheDocument();
     })
       
