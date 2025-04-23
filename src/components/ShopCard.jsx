@@ -6,7 +6,10 @@ import styles from "./ShopCard.module.css";
  * 
  * @typedef {import("../utils/types.jsdoc").ShopItem} ShopItem
  * 
- * @param {{ shopItem: ShopItem }} props
+ * @typedef {Object} ShopCardProps
+ * @property {ShopItem} shopItem
+ * 
+ * @param {ShopCardProps} props
  * @returns {JSX.Element}
  */
 const ShopCard = ({shopItem}) => {

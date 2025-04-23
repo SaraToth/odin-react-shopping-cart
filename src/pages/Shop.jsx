@@ -5,9 +5,9 @@ import ErrorPage from "./ErrorPage";
 
 
 /**
- * Shop Page Component
+ * Renders the Shop Page and the product cards
  * 
- * @returns {JSX.Element} Rendeers shop Page content
+ * @returns {JSX.Element} Renders shop Page content
  */
 const Shop = () => {
     const [shopData, setShopData] = useState([]);
