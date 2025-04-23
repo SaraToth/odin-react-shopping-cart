@@ -1,9 +1,9 @@
 import styles from "./ErrorPage.module.css";
 
 /**
- * ErrorPage Component - loads an error message whenever user encounters a network issue
+ * Renders an error message
  * 
- * @returns {JSX.Element} Renders an error message to the UI
+ * @returns {JSX.Element}
  */
 const ErrorPage = () => {
     
