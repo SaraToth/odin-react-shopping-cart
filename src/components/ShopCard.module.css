@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 40px;
+    padding: 30px 0;
     box-sizing: border-box;
 }
 
@@ -40,12 +40,20 @@
     flex-direction: column;
     justify-content: flex-start;
     font-weight: bold;
-    padding: 0px 40px;
     flex-grow: 1;
 }
 
+/* Image span and card text get equal padding */
+.span, .cardText {
+    /* Shrinks padding for smaller devices, 4vw = 40px on larger screens */
+    padding-left: clamp(10px, 4vw, 40px);
+    padding-right: clamp(10px, 4vw, 40px);
+}
+
 .price {
-    padding: 30px 0 50px;
+    /* clamp padding to shrink on smaller devices */
+    padding-top: clamp(10px, 3vw, 30px); /* preferred value 3vw is about 30px */
+    padding-bottom: clamp(20px, 5vw, 50px); /* 5vw is about 50px */
     font-size: 30px;
     margin-top: auto;
 }
