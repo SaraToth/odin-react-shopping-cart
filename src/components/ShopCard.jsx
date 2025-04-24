@@ -4,10 +4,15 @@ import styles from "./ShopCard.module.css";
 /**
  * Renders a product card with title, price, image, and add to cart button
  * 
- * @typedef {import("../utils/types.jsdoc").ShopItem} ShopItem
+ * @typedef {Object} ShopItem
+ * @property {string} imageURL
+ * @property {number} price
+ * @property {string} title
+ * @property {number} id
+ * @property {string} description
  * 
  * @typedef {Object} ShopCardProps
- * @property {ShopItem} shopItem
+ * @property {ShopItem} shopItem Object of product info fetched from API
  * 
  * @param {ShopCardProps} props
  * @returns {JSX.Element}
