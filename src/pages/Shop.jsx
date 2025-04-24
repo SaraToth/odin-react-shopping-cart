@@ -10,7 +10,7 @@ import ErrorPage from "./ErrorPage";
  * @returns {JSX.Element} Renders shop Page content
  */
 const Shop = () => {
-    const [shopData, setShopData] = useState([]); // API fetched data
+    const [shopData, setShopData] = useState([]); // API data stored as array of objects
     const [error, setError] = useState(null); // Handles API error
     const [loading, setLoading] = useState(true); // Handles API loading
 
