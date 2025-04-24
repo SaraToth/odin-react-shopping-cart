@@ -5,6 +5,7 @@
     flex: 1;
 }
 
+/* Wraps around h1 tag to center it */
 .span {
     display: flex;
     justify-content: center;
@@ -14,7 +15,7 @@
 
 .shopGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 100px;
     padding: 75px 50px 125px;
     flex: 1;
