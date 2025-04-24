@@ -18,8 +18,14 @@ import styles from "./ShopCard.module.css";
  * @returns {JSX.Element}
  */
 const ShopCard = ({shopItem}) => {
+    //Handles number of items in the cart
     const {cartNumber, setCartNumber} = useOutletContext();
 
+    /**
+     * Increments the cart +1 when add to cart btn is clicked
+     * 
+     * @returns {void}
+     */
     const handleClick = () => {
         const currentNumber = cartNumber + 1;
         setCartNumber(currentNumber);
