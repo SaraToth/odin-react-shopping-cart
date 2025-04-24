@@ -10,11 +10,16 @@ import ErrorPage from "./ErrorPage";
  * @returns {JSX.Element} Renders shop Page content
  */
 const Shop = () => {
-    const [shopData, setShopData] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [shopData, setShopData] = useState([]); // API fetched data
+    const [error, setError] = useState(null); // Handles API error
+    const [loading, setLoading] = useState(true); // Handles API loading
 
     useEffect(() => {
+        /**
+         * Fetches shop product information from API and updates shopData state
+         * 
+         * @returns {void}
+         */
         async function fetchShopData () {
             try {
                 const response = await fetch('https://fakestoreapi.com/products/', { mode: "cors"});
