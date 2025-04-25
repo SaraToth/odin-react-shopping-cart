@@ -5,8 +5,10 @@
     background-color: white;
     top: 0;
     display: flex;
-    font-size: 20px;
-    padding: 25px 50px 10px;
+    font-size: clamp(16px, 2vw, 20px);
+    padding: 25px 0 10px;
+    padding-left: clamp(30px, 5vw, 50px);
+    padding-right: clamp(30px, 5vw, 50px);
 }
 
 .ul {
@@ -27,8 +29,9 @@
 }
 
 .cart {
-    max-width: 25px;
+    width: clamp(20px, 2.5vw, 25px);
     height: auto;
+    /* padding-right: clamp(0px, 1.5vw 15px); */
     padding-right: 15px;
 }
 
