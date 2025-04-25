@@ -16,10 +16,15 @@
     justify-content: center;
     align-items: center;
     background-image: url("../assets/notebooks-bgd.jpg");
-    background-size: 100%;
+    background-size: cover; /* Fills entire bgd area */
+    background-position: center;
     background-repeat: no-repeat;
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 .section h1 {
     font-size: 40px;
+    color: black;
+    text-shadow: 1px 1px 2px lightgray;
 }
