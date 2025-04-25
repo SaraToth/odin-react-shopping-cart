@@ -20,8 +20,10 @@ const Navbar = ({cartNumber}) => {
                 <li><Link className={styles.link} to ="/">Home</Link></li>
                 <li><Link className={styles.link} to="/Shop">Shop</Link></li>
             </ul>
-            <span><img alt="cart" className={styles.cart} src={cart}/></span>
-            {cartNumber > 0 && <span className={styles.badge}>{cartNumber}</span>}
+            <div className={styles.cartContainer}>
+                <span><img alt="cart" className={styles.cart} src={cart}/></span>
+                {cartNumber > 0 && <span className={styles.badge}>{cartNumber}</span>}
+            </div>
         </nav>
     )
 }
