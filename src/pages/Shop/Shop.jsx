@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ShopCard from "../components/ShopCard/ShopCard";
+import ShopCard from "../../components/ShopCard/ShopCard";
 import styles from "./Shop.module.css";
-import ErrorPage from "./ErrorPage";
+import ErrorPage from "../ErrorPage";
 
 
 /**
