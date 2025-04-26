@@ -15,12 +15,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.bgdImage {
     background-image: url("../../assets/notebooks-bgd.webp");
     background-size: cover; /* Fills entire bgd area */
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100%;
-    box-sizing: border-box;
 }
 
 .section h1 {
