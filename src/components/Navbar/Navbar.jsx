@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import cart from "../../assets/shopping-cart.png";
+import cart from "../../assets/shopping-cart.webp";
 
 /**
  * Renders the main navbar with Home and Shop links, and cart indicator
