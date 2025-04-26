@@ -9,6 +9,7 @@
     padding: 25px 0 10px;
     padding-left: clamp(30px, 5vw, 50px);
     padding-right: clamp(30px, 5vw, 50px);
+    z-index: 10; /* Ensures Navbar is not covered by Home bgd img */
 }
 
 .ul {

@@ -17,9 +17,18 @@
     align-items: center;
     min-height: 100%;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 0; /* Base location for Home section content */
 }
 
 .bgdImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10; /* Ensures bgd image is behind home content */
     background-image: url("../../assets/notebooks-bgd.webp");
     background-size: cover; /* Fills entire bgd area */
     background-position: center;
