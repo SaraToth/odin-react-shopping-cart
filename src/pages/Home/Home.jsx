@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import bgdImage from "../../assets/notebooks-bgd.webp";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 /**
  * Renders Home page text and shop now button
@@ -10,7 +10,7 @@ import { useLayoutEffect } from "react";
  */
 const Home = () => {
     // Preloads background image
-    useLayoutEffect(() => {
+    useEffect(() => {
         const link = document.createElement("link");
         link.rel = "preload";
         link.as = "image";
