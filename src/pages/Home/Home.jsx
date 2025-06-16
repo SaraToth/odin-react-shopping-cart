@@ -9,6 +9,7 @@ import { useEffect } from "react";
  * @returns {JSX.Element}
  */
 const Home = () => {
+    
     // Preloads background image
     useEffect(() => {
         const link = document.createElement("link");
